@@ -106,23 +106,15 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+I want to get a job in tech, initially I wanted a job in specifically cybersecurity but I've expanded that out considering how cooked the tech job market is. I enjoy playing video games, riding my bike when the weather is good, and coding.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -142,8 +134,6 @@ list-like components that have different ways of manipulating the data. Think
 about different ways you might allow a client to manipulate your component.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -211,68 +201,84 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Priority Queue
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - A queue that, rather than being strictly FIFO, is based on a given "priority" for each element. Elements with a higher priority are dequeued first. For example, with a PriorityQueue<Integer>, depending on the comparator used, you are always guranteed to either get the smallest or largest number in the queue.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void enqueue(T x): adds x to this
+    - T dequeue(): removes the highest priority item from this, and returns it
+    - int length(): returns the length of this
+    - Comparator<T> getComparator(): gets the currently set comparator for this
+    - void setComparator(Comparator<T> comparator)
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void combine(PriorityQueue<T> q): combines q and this
+    - T front(): reports the highest priority item in this
+    - T back(): reports the lowest priority item in this
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, elements can be added and removed from the queue, and the comparator can be modified
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Not internal classes, but it does rely on Java's standard library Comparator<T> objects
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I don't think this component would need any constants or enums, unless I wanted to implement my own set of comparators.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. For example append() can be implemented by enqueueing every element of the previous queue
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Priority Queue (immutable comparator)
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - The same priority queue as the first design, but the comparator is immuatable. This may be preferable if users would prefer to create a new priority queue and migrate the contents of the old one.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void enqueue(T x): adds x to this
+    - T dequeue(): removes the highest priority item from this, and returns it
+    - int length(): returns the length of this
+    - Comparator<T> getComparator(): gets the currently set comparator for this
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void combine(PriorityQueue<T> q): combines q and this
+    - T front(): reports the highest priority item in this
+    - T back(): reports the lowest priority item in this
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, elements can be added and removed from the queue
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Not internal classes, but it does rely on Java's standard library Comparator<T> objects
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - In this case, there would be a constant comparator that determines the order of the queue.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes. For example append() can be implemented by enqueueing every element of the previous queue
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: Priority Queue (explicit priorities)
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - Same priority queue design as the first, but with an added explicit priority. Elements of the same priority are dequeued as if they were their own queue (FIFO). Higher priority elements are still dequeued first.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - void enqueue(T x, int p): adds element x to this with priority p
+    - T dequeue(): removes the highest priority item (or item added first if priorities match) and returns it
+    - int length(): returns the length of this
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - void combine(PriorityQueue<T> q): combines q and this
+    - int highestPriority(): returns the highest listed priority in this
+    - int lowestPriority(): returns the lowest listed priority in this
+    - T front(): reports the first item (of the highest priority) of this
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, elements can be added and removed from the queue
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Not internal classes, but it does rely on Java's standard library Comparator<T> objects
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Since we are no longer using a comparator, we no longer have to worry about whether or not it's mutable, so we do not need any enums or constants.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - I might have trouble with highestPriority and lowestPriority, but again, all the rest can be implemented using enqueue and dequeue
 
 ## Post-Assignment
 
@@ -303,9 +309,9 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Designed a <!-- insert name of component 1 here --> component
-- Designed a <!-- insert name of component 2 here --> component
-- Designed a <!-- insert name of component 3 here --> component
+- Designed a PriorityQueue component
+- Designed a FixedOrderPriorityQueue component
+- Designed a ExplicitPriorityQueue component
 ```
 
 Here `YYYY.MM.DD` would be the date of your submission, such as 2024.04.21.
@@ -320,8 +326,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -330,11 +334,7 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
-
 ### Peer Review
-
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
