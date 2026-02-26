@@ -6,10 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## YYYY.MM.DD
+## 2026.02.06
 
 ### Added
 
 - Designed a PriorityQueue component
 - Designed a FixedOrderPriorityQueue component
 - Designed a ExplicitPriorityQueue component
+
+## 2026.02.25
+
+### Added
+
+- PriorityQueueKernel interface
+- PriorityQueue interface
+- PriorityQueueSecondary abstract class and secondary method implementations
+- PriorityQueue1L kernel method implementations for PriorityQueue on Queue
