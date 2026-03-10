@@ -22,3 +22,9 @@ the following form: YYYY.0M.0D.
 - PriorityQueue interface
 - PriorityQueueSecondary abstract class and secondary method implementations
 - PriorityQueue1L kernel method implementations for PriorityQueue on Queue
+
+## 2026.03.10
+
+### Added
+
+- diagram.txt diagram to show hierarchy of components
