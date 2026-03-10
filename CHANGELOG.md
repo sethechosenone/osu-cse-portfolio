@@ -28,3 +28,4 @@ the following form: YYYY.0M.0D.
 ### Added
 
 - diagram.txt diagram to show hierarchy of components
+- PriorityQueue2 implementation (PriorityQueue on heap)
