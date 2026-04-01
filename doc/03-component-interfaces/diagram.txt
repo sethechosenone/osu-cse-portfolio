@@ -1,0 +1,10 @@
+            PriorityQueueKernel
+                    | extends
+                    V
+               PriorityQueue
+                    | extends
+                    V
+                     -> PriorityQueueSecondary
+    implements  /          \ implements
+               /            \
+        PriorityQueue1L      PriorityQueue2
