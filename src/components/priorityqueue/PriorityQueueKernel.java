@@ -48,4 +48,6 @@ public interface PriorityQueueKernel<T> {
      * @ensures this.order = comp and perms(this, #this)
      */
     void setComparator(Comparator<T> comp);
+
+    void clear();
 }

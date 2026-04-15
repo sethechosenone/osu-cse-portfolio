@@ -29,3 +29,10 @@ the following form: YYYY.0M.0D.
 
 - diagram.txt diagram to show hierarchy of components
 - PriorityQueue2 implementation (PriorityQueue on heap)
+
+## 2026.04.15
+
+### Updated
+
+- Moved clear() to kernel
+- Added common methods to secondary

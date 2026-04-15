@@ -56,10 +56,42 @@ public abstract class PriorityQueueSecondary<T> implements PriorityQueue<T> {
     }
 
     @Override
-    public final void clear() {
-        while (!this.isEmpty()) {
-            this.dequeue();
+    public final boolean equals(PriorityQueue<T> pq) {
+        if (this == pq) {
+            return true;
         }
+        if (this.length() == pq.length()) {
+            for (int i = 0; i < this.length(); i++) {
+                T thisItem = this.dequeue();
+                T pqItem = pq.dequeue();
+                if (!thisItem.equals(pqItem)) {
+                    break;
+                }
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    @Override
+    public final int hashCode() {
+        return this.length();
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder result = new StringBuilder();
+        result.append("{");
+        for (int i = 0; i < this.length(); i++) {
+            if (i == this.length() - 1) {
+                result.append(this.dequeue());
+            } else {
+                result.append(this.dequeue() + ", ");
+            }
+        }
+        result.append("}");
+        return result.toString();
     }
 }
 // comment so this file shows up in the PR
