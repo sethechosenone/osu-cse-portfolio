@@ -235,4 +235,11 @@ public class PriorityQueue2<T> extends PriorityQueueSecondary<T> {
     public void setComparator(Comparator<T> comp) {
         this.comp = comp;
     }
+
+    @Override
+    public void clear() {
+        for (int i = 0; i < this.rep.length; i++) {
+            this.rep[i] = null;
+        }
+    }
 }

@@ -75,4 +75,9 @@ public final class PriorityQueue1L<T> extends PriorityQueueSecondary<T> {
         this.comp = comp;
         this.rep.sort(this.comp);
     }
+
+    @Override
+    public void clear() {
+        this.rep.clear();
+    }
 }

@@ -50,5 +50,8 @@ public interface PriorityQueue<T> extends PriorityQueueKernel<T> {
      * @clears this
      * @ensures this = empty_string
      */
+    @Override
     void clear();
+
+    boolean equals(PriorityQueue<T> pq);
 }
