@@ -1,7 +1,9 @@
 package components.priorityqueue;
 
-import java.util.ArrayList;
 import java.util.Comparator;
+
+import components.sequence.Sequence;
+import components.sequence.Sequence1L;
 
 /**
  * Priority queue implementations for secondary methods.
@@ -32,13 +34,13 @@ public abstract class PriorityQueueSecondary<T> implements PriorityQueue<T> {
     @Override
     public final T back() {
         int len = this.length();
-        ArrayList<T> hold = new ArrayList<>(len);
+        Sequence<T> hold = new Sequence1L<>();
         for (int i = 0; i < len; i++) {
-            hold.add(this.dequeue());
+            hold.add(hold.length(), this.dequeue());
         }
-        T result = hold.get(len - 1);
-        for (T item : hold) {
-            this.enqueue(item);
+        T result = hold.entry(len - 1);
+        for (int i = 0; i < len; i++) {
+            this.enqueue(hold.entry(i));
         }
         return result;
     }
@@ -64,8 +66,10 @@ public abstract class PriorityQueueSecondary<T> implements PriorityQueue<T> {
             for (int i = 0; i < this.length(); i++) {
                 T thisItem = this.dequeue();
                 T pqItem = pq.dequeue();
+                this.enqueue(thisItem);
+                pq.enqueue(pqItem);
                 if (!thisItem.equals(pqItem)) {
-                    break;
+                    return false;
                 }
             }
             return true;
@@ -83,12 +87,17 @@ public abstract class PriorityQueueSecondary<T> implements PriorityQueue<T> {
     public String toString() {
         StringBuilder result = new StringBuilder();
         result.append("{");
-        for (int i = 0; i < this.length(); i++) {
-            if (i == this.length() - 1) {
-                result.append(this.dequeue());
-            } else {
-                result.append(this.dequeue() + ", ");
+        int len = this.length();
+        Sequence<T> hold = new Sequence1L<>();
+        for (int i = 0; i < len; i++) {
+            hold.add(hold.length(), this.dequeue());
+        }
+        for (int i = 0; i < len; i++) {
+            result.append(hold.entry(i));
+            if (i < len - 1) {
+                result.append(", ");
             }
+            this.enqueue(hold.entry(i));
         }
         result.append("}");
         return result.toString();

@@ -47,7 +47,8 @@ public final class PriorityQueue1L<T> extends PriorityQueueSecondary<T> {
     @Override
     public void enqueue(T x) {
         boolean found = false;
-        for (int i = 0; i < this.rep.length(); i++) {
+        int len = this.rep.length();
+        for (int i = 0; i < len; i++) {
             T check = this.rep.dequeue();
             if (!found && this.comp.compare(x, check) <= 0) {
                 this.rep.enqueue(x);

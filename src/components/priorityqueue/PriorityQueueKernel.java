@@ -9,6 +9,7 @@ import java.util.Comparator;
  *            the type of all the elements in {@code this}
  */
 public interface PriorityQueueKernel<T> {
+    // PriorityQueue is in this file, it must've been missing from the first PR
     /**
      * Adds {@code x} to the end of {@code this}.
      *
@@ -49,5 +50,11 @@ public interface PriorityQueueKernel<T> {
      */
     void setComparator(Comparator<T> comp);
 
+    /**
+     * Removes every item from {@code this}.
+     *
+     * @updates this
+     * @ensures this = <>
+     */
     void clear();
 }

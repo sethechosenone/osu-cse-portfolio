@@ -241,5 +241,6 @@ public class PriorityQueue2<T> extends PriorityQueueSecondary<T> {
         for (int i = 0; i < this.rep.length; i++) {
             this.rep[i] = null;
         }
+        this.length = 0;
     }
 }
