@@ -43,6 +43,7 @@ the following form: YYYY.0M.0D.
 
 - Designed test suite for PriorityQueue component
 - Designed two different use cases for PriorityQueue
+- Added proof-of-concept documentation missing from part 2
 
 ### Updated
 
