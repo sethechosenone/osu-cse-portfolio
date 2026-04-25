@@ -1,8 +1,8 @@
 # Portfolio Part 6: Finishing Touches
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) and delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) and delete this comment -->
-- **Due Date**: <!-- TODO: fill out with due date and time (e.g., 10/17 @ 3:10 PM EST) and delete this comment -->
+- **Name**: Seth Adkins
+- **Dot Number**: adkins.777
+- **Due Date**: Apr 23, 2026 @ 12:40 PM
 
 ## Assignment Overview
 
@@ -307,18 +307,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I feel like after having done this portfolio project, I have a better grasp of how to write maintainable Java code. Before my code was usually decently maintainable, but with this setup you can easily create entirely new implementations of the same idea. When I was working as a SWE intern at JPMC, I often wondered why there were 4 different files just for the same DTO or database field, but after having gone through this project it makes more sense; it is to ensure that the code is maintainable.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+It made me realize that maintainability wasn't just about DRY, it also means being able to add flexibility and build off of ideas you've already come up with. I addressed this gap by ensuring I am able to understand the structure of my component, and how each part contributes to the overall maintainability of the component.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+It helped me understand why seemingly small tasks end up having a whole lot of boilerplate. It makes sense now; it is so that if the implementation is to change or new implementations are to be created, code can be reused. I still enjoy software development, but the seemingly unnecessary boilerplate made it less enjoyable. At least I now know why it exists.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -326,25 +326,25 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+I had to learn how to program on the assumption that another component works exactly as intended, and envision how I want the calls to work, which is not how I usually do it. Normally, I write from the ground up with known functionality, but the nature of abstract classes forces me to write my software as though the non-existent pieces already work.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+I designed a maintainable, scalable software component using coding practices involving forward thinking
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+This project hasn't altered my career path in any way other than furthering my skills. I chose a relatively simple data structure to write in OSU CSE style, so it was never going to be something career-altering.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+I need to work on some more projects on my own. I have a decent-ish Github profile, but I would like to make some contributions to open source to further bolster my provable experience.
 
 ### Changelog
 

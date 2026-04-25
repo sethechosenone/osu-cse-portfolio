@@ -36,3 +36,16 @@ the following form: YYYY.0M.0D.
 
 - Moved clear() to kernel
 - Added common methods to secondary
+
+## 2026.04.23
+
+### Added
+
+- Designed test suite for PriorityQueue component
+- Designed two different use cases for PriorityQueue
+- Added proof-of-concept documentation missing from part 2
+
+### Updated
+
+- Fixed several bugs in PriorityQueue2, PriorityQueueSecondary, and PriorityQueue1L
+- Added PriorityQueueDemo featuring integer counting, and a task scheduler
