@@ -49,3 +49,9 @@ the following form: YYYY.0M.0D.
 
 - Fixed several bugs in PriorityQueue2, PriorityQueueSecondary, and PriorityQueue1L
 - Added PriorityQueueDemo featuring integer counting, and a task scheduler
+
+## 2026.04.24
+
+### Updates
+
+- Added missing javadoc from clear() method

@@ -7,6 +7,7 @@ package components.priorityqueue;
  *            the type of all the elements in {@code this}
  */
 public interface PriorityQueue<T> extends PriorityQueueKernel<T> {
+    // PriorityQueue is in this file, it must've been missing from the first PR
     /**
      * Returns the first item in {@code this}.
      *
